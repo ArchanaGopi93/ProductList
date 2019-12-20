@@ -8,31 +8,23 @@
 
 import Foundation
 
-struct Product:Codable {
-    let productName :String
-    let productPrice:String
-    let image : String
-    let pid:String
-    let description:String
-    let offerPrice:String
-
+class Product:Codable {
+    let name :String?
+    let price:String?
+    let image : String?
+    let pid:String?
+    let desc:String?
+    let offerPrice:String?
     
-    init(productName:String,productPrice:String,image:String,pid:String,description:String,price:String,offerPrice:String) {
-        self.productName = productName
-        self.productPrice = productPrice
+    
+    init(productName:String,productPrice:String,image:String,pid:String,description:String,offerPrice:String) {
+        self.name = productName
+        self.price = productPrice
         self.image = image
         self.pid = pid
-        self.description = description
-        self.productPrice = price
+        self.desc = description
         self.offerPrice = offerPrice
         
     }
-    enum CodingKeys: String, CodingKey {
-          case productName = "name"
-          case productPrice = "price"
-          case image = "image"
-          case pid = "pid"
-          case description = "desc"
-          case offerPrice = "offerPrice"
-      }
+
 }

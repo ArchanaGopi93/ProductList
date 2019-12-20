@@ -10,7 +10,7 @@ import Foundation
 
 class ServiceWorker  {
     
-    func performServiceCallToFetchData()  {
+    func performServiceCallToFetchData(completion: @escaping(_ model:[Product]?,_ error:Error?) -> Void)  {
            
         
         let session = URLSession.shared
@@ -23,43 +23,19 @@ class ServiceWorker  {
           var request = URLRequest(url: downloadURL)
           request.httpMethod = "POST"
           request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-
-        let task = session.dataTask(with: downloadURL) { data, response, error in
-
-            if error != nil || data == nil {
-                print("Client error!")
-                return
+        let task = session.dataTask(with: downloadURL) { (data, response, error) in
+            if let _data = data {
+                if let products =  try? JSONDecoder().decode([Product].self, from: _data) {
+                    completion(products,nil)
+                } else {
+                    completion(nil,error)
+                }
+                              
             }
-
-            guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
-                print("Server error!")
-                return
-            }
-
-            guard let mime = response.mimeType, mime == "application/json" else {
-                print("Wrong MIME type!")
-                return
-            }
-
-          
-//              if let jsonData = response?.data(using: .utf8)
-//                {
-//                    let decoder = JSONDecoder()
-//
-//                    do {
-//                        let user = try decoder.decode(Product.self, from: jsonData)
-//                        print(user.last_name)
-//                    } catch {
-//                        print(error.localizedDescription)
-//                    }
-//                }
-                
-                
-            
         }
-
         task.resume()
+     
     }
     
-    
 }
+

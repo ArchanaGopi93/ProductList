@@ -35,17 +35,37 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="1aq-d0-hGv">
+                        <rect key="frame" x="282" y="126.5" width="94" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="94" id="qPf-4i-hDX"/>
+                        </constraints>
+                        <connections>
+                            <action selector="stepperValueChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="5xU-VP-Zkm"/>
+                        </connections>
+                    </stepper>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PD0-Pi-hTX">
+                        <rect key="frame" x="399" y="158.5" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="8Ru-C5-bso" firstAttribute="leading" secondItem="Hz8-Da-XDl" secondAttribute="trailing" constant="57" id="1l7-ia-mQJ"/>
                     <constraint firstItem="yv1-B1-825" firstAttribute="top" secondItem="8Ru-C5-bso" secondAttribute="bottom" constant="20" id="3xR-QX-vAY"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="1aq-d0-hGv" secondAttribute="trailing" constant="88" id="6hp-ne-IXu"/>
                     <constraint firstItem="yv1-B1-825" firstAttribute="trailing" secondItem="8Ru-C5-bso" secondAttribute="trailing" id="Flu-IE-yqE"/>
+                    <constraint firstAttribute="trailing" secondItem="PD0-Pi-hTX" secondAttribute="trailing" constant="85" id="JPp-cC-kdC"/>
                     <constraint firstAttribute="trailing" secondItem="yv1-B1-825" secondAttribute="trailing" constant="20" id="K3n-MW-xga"/>
                     <constraint firstAttribute="trailing" secondItem="8Ru-C5-bso" secondAttribute="trailing" constant="20" id="OPW-cQ-nhd"/>
+                    <constraint firstItem="PD0-Pi-hTX" firstAttribute="bottom" secondItem="1aq-d0-hGv" secondAttribute="bottom" id="SuH-n6-TgD"/>
+                    <constraint firstItem="1aq-d0-hGv" firstAttribute="top" secondItem="yv1-B1-825" secondAttribute="bottom" constant="20" id="Wrb-VM-XCB"/>
+                    <constraint firstAttribute="bottom" secondItem="1aq-d0-hGv" secondAttribute="bottom" constant="23" id="aDr-O5-wlj"/>
                     <constraint firstAttribute="bottom" secondItem="Hz8-Da-XDl" secondAttribute="bottom" constant="66" id="dYl-Sa-bl2"/>
                     <constraint firstItem="Hz8-Da-XDl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="65" id="g3g-Zs-5sR"/>
+                    <constraint firstItem="PD0-Pi-hTX" firstAttribute="leading" secondItem="1aq-d0-hGv" secondAttribute="trailing" constant="23" id="ho3-Ea-soD"/>
                     <constraint firstItem="yv1-B1-825" firstAttribute="leading" secondItem="Hz8-Da-XDl" secondAttribute="trailing" constant="57" id="sHo-rb-vrP"/>
-                    <constraint firstAttribute="bottom" secondItem="yv1-B1-825" secondAttribute="bottom" constant="20" id="sbD-01-J2A"/>
                     <constraint firstItem="yv1-B1-825" firstAttribute="leading" secondItem="8Ru-C5-bso" secondAttribute="leading" id="vcu-9T-uBu"/>
                     <constraint firstItem="8Ru-C5-bso" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="45" id="zom-ed-XU9"/>
                     <constraint firstItem="Hz8-Da-XDl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="zsv-gT-A0W"/>
@@ -53,9 +73,11 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="count" destination="PD0-Pi-hTX" id="zLP-m1-SO8"/>
                 <outlet property="productImage" destination="Hz8-Da-XDl" id="zsV-gs-Q1I"/>
                 <outlet property="productName" destination="8Ru-C5-bso" id="D3C-Ew-wMh"/>
                 <outlet property="productPrice" destination="yv1-B1-825" id="F9Q-UM-JR3"/>
+                <outlet property="stepper" destination="1aq-d0-hGv" id="HVh-QB-sfE"/>
             </connections>
             <point key="canvasLocation" x="256.52173913043481" y="105.13392857142857"/>
         </tableViewCell>
