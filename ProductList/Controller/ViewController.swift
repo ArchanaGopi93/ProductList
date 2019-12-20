@@ -16,7 +16,7 @@ class ViewController: UITableViewController,ProductPreferenceDelegate {
     
     var productArray = [Product]()
     var preferredProducts = [Product]()
-    var count = 0
+    var count = 1
     override func viewDidLoad() {
         super.viewDidLoad()
        // self.parseProductItems()
@@ -108,10 +108,13 @@ class ViewController: UITableViewController,ProductPreferenceDelegate {
     func addOrRemoveProductsFromList(cell:ProductCellTableViewCell) {
         if let indexPath = tableView.indexPath(for: cell) {
         if !cell.isPreferred {
-            
+            count -= 1
+            cell.count.text = count.description
             self.productArray.remove(at: indexPath.row)
             
         } else {
+            count += 1
+            cell.count.text = count.description
             let product = self.productArray[indexPath.row]
             self.productArray.append(product)
         }

@@ -178,38 +178,6 @@
             endingLineNumber = "29"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "1C4BEFFD-ED23-436C-91E4-E35D4846B6D9 - abae3f1811b17f7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;ProductList.Product&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ProductList.ViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "ProductList"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/techops/Desktop/Workshop/ProductList/ProductList/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "688">
-               </Location>
-               <Location
-                  uuid = "1C4BEFFD-ED23-436C-91E4-E35D4846B6D9 - 7d004515f6adc4e6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;Swift.Array&lt;ProductList.Product&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ProductList.ViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "ProductList"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/techops/Desktop/Workshop/ProductList/ProductList/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "44">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -273,6 +241,38 @@
             startingLineNumber = "105"
             endingLineNumber = "105"
             landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BA316CA0-92D5-4713-90AE-C398350EBB13"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProductList/Controller/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "addOrRemoveProductsFromList(cell:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "182A1EAF-AF60-49D8-9A83-C73161754418"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProductList/Controller/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "addOrRemoveProductsFromList(cell:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

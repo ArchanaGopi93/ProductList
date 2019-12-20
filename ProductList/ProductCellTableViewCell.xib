@@ -36,7 +36,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="1aq-d0-hGv">
-                        <rect key="frame" x="282" y="126.5" width="94" height="32"/>
+                        <rect key="frame" x="282" y="126.5" width="94" height="32.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="94" id="qPf-4i-hDX"/>
                         </constraints>
@@ -44,11 +44,15 @@
                             <action selector="stepperValueChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="5xU-VP-Zkm"/>
                         </connections>
                     </stepper>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PD0-Pi-hTX">
-                        <rect key="frame" x="399" y="158.5" width="0.0" height="0.0"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PD0-Pi-hTX">
+                        <rect key="frame" x="399" y="138" width="35" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="r1m-hb-ueM"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
+                        <size key="shadowOffset" width="0.0" height="0.0"/>
                     </label>
                 </subviews>
                 <constraints>
@@ -56,15 +60,16 @@
                     <constraint firstItem="yv1-B1-825" firstAttribute="top" secondItem="8Ru-C5-bso" secondAttribute="bottom" constant="20" id="3xR-QX-vAY"/>
                     <constraint firstAttribute="trailingMargin" secondItem="1aq-d0-hGv" secondAttribute="trailing" constant="88" id="6hp-ne-IXu"/>
                     <constraint firstItem="yv1-B1-825" firstAttribute="trailing" secondItem="8Ru-C5-bso" secondAttribute="trailing" id="Flu-IE-yqE"/>
-                    <constraint firstAttribute="trailing" secondItem="PD0-Pi-hTX" secondAttribute="trailing" constant="85" id="JPp-cC-kdC"/>
                     <constraint firstAttribute="trailing" secondItem="yv1-B1-825" secondAttribute="trailing" constant="20" id="K3n-MW-xga"/>
+                    <constraint firstItem="PD0-Pi-hTX" firstAttribute="top" secondItem="yv1-B1-825" secondAttribute="bottom" constant="31.5" id="LQj-SZ-f8a"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="PD0-Pi-hTX" secondAttribute="bottom" constant="-16" id="Mi4-Kg-zt9"/>
                     <constraint firstAttribute="trailing" secondItem="8Ru-C5-bso" secondAttribute="trailing" constant="20" id="OPW-cQ-nhd"/>
-                    <constraint firstItem="PD0-Pi-hTX" firstAttribute="bottom" secondItem="1aq-d0-hGv" secondAttribute="bottom" id="SuH-n6-TgD"/>
+                    <constraint firstItem="PD0-Pi-hTX" firstAttribute="leading" secondItem="1aq-d0-hGv" secondAttribute="trailing" constant="23" id="PWa-kz-yBt"/>
+                    <constraint firstItem="1aq-d0-hGv" firstAttribute="bottom" secondItem="PD0-Pi-hTX" secondAttribute="bottom" id="Psg-pj-dg1"/>
                     <constraint firstItem="1aq-d0-hGv" firstAttribute="top" secondItem="yv1-B1-825" secondAttribute="bottom" constant="20" id="Wrb-VM-XCB"/>
-                    <constraint firstAttribute="bottom" secondItem="1aq-d0-hGv" secondAttribute="bottom" constant="23" id="aDr-O5-wlj"/>
                     <constraint firstAttribute="bottom" secondItem="Hz8-Da-XDl" secondAttribute="bottom" constant="66" id="dYl-Sa-bl2"/>
                     <constraint firstItem="Hz8-Da-XDl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="65" id="g3g-Zs-5sR"/>
-                    <constraint firstItem="PD0-Pi-hTX" firstAttribute="leading" secondItem="1aq-d0-hGv" secondAttribute="trailing" constant="23" id="ho3-Ea-soD"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="PD0-Pi-hTX" secondAttribute="trailing" constant="30" id="lo3-zK-Chg"/>
                     <constraint firstItem="yv1-B1-825" firstAttribute="leading" secondItem="Hz8-Da-XDl" secondAttribute="trailing" constant="57" id="sHo-rb-vrP"/>
                     <constraint firstItem="yv1-B1-825" firstAttribute="leading" secondItem="8Ru-C5-bso" secondAttribute="leading" id="vcu-9T-uBu"/>
                     <constraint firstItem="8Ru-C5-bso" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="45" id="zom-ed-XU9"/>
