@@ -22,6 +22,7 @@
 		6208789623AC987600933A61 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6208789523AC987500933A61 /* ProductModel.swift */; };
 		620878D723ACAC2B00933A61 /* ServiceWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620878D623ACAC2B00933A61 /* ServiceWorker.swift */; };
 		620878D923ACDDFE00933A61 /* ProductListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620878D823ACDDFE00933A61 /* ProductListInteractor.swift */; };
+		6292B09123ADD81C008BE046 /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6292B09023ADD81C008BE046 /* WishListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		6208789523AC987500933A61 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		620878D623ACAC2B00933A61 /* ServiceWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceWorker.swift; sourceTree = "<group>"; };
 		620878D823ACDDFE00933A61 /* ProductListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListInteractor.swift; sourceTree = "<group>"; };
+		6292B09023ADD81C008BE046 /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				6208786023AC936E00933A61 /* ViewController.swift */,
+				6292B09023ADD81C008BE046 /* WishListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				6208789123AC960400933A61 /* ProductCellTableViewCell.swift in Sources */,
 				6208785D23AC936E00933A61 /* AppDelegate.swift in Sources */,
 				620878D923ACDDFE00933A61 /* ProductListInteractor.swift in Sources */,
+				6292B09123ADD81C008BE046 /* WishListViewController.swift in Sources */,
 				6208785F23AC936E00933A61 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

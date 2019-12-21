@@ -10,10 +10,13 @@ import UIKit
 
 
 
-class ViewController: UITableViewController,ProductPreferenceDelegate {
-    
-    
-    
+
+var numberOfProductsInWishList = 0
+var totalSavingsAmount = 0
+var totalAmount = 0
+
+
+class ProductListViewController: UITableViewController,ProductPreferenceDelegate {
     var productArray = [Product]()
     var preferredProducts = [Product]()
     var count = 1
@@ -68,6 +71,7 @@ class ViewController: UITableViewController,ProductPreferenceDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ProductCellTableViewCell
         cell?.preferredDelegate = self
         let product = productArray[indexPath.row] as Product
+        cell?.product = product
         cell?.productName.text = product.name
         cell?.productPrice.text = product.price
         let hasOffer = self.checkForOfferPrice(product: product)
@@ -80,7 +84,9 @@ class ViewController: UITableViewController,ProductPreferenceDelegate {
         
         return cell!
     }
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return productArray.count
       }
@@ -93,7 +99,8 @@ class ViewController: UITableViewController,ProductPreferenceDelegate {
     
     func checkForOfferPrice(product : Product)  -> Bool {
        
-            if product.offerPrice != nil {
+        if product.price != nil {
+                
                 return true
             } else {
                 return false
@@ -101,26 +108,51 @@ class ViewController: UITableViewController,ProductPreferenceDelegate {
         
         
     }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+ 
+    
+    func addOrRemoveProductsFromList(id: String?, isAdded: Bool) {
+        if let pid = id {
+            if let product = productArray.filter({$0.pid == pid}).first {
+            if isAdded {
+                productArray.append(product)
+            } else {
+                if let index = productArray.firstIndex(where: {$0.pid == pid}) {
+                productArray.remove(at: index)
+                }
+            }
+                preferredProducts = productArray
+                tableView.reloadData()
+                self.createWishList()
+            }
+        }
+    }
+    
+    func countTheTotalNumberOfProductsInWishList() {
+        numberOfProductsInWishList = preferredProducts.count
         
     }
     
-    func addOrRemoveProductsFromList(cell:ProductCellTableViewCell) {
-        if let indexPath = tableView.indexPath(for: cell) {
-        if !cell.isPreferred {
-            count -= 1
-            cell.count.text = count.description
-            self.productArray.remove(at: indexPath.row)
-            
-        } else {
-            count += 1
-            cell.count.text = count.description
-            let product = self.productArray[indexPath.row]
-            self.productArray.append(product)
+    func getTotalOfferAndProductAmount() {
+        let _preferredProducts = preferredProducts.filter({$0.offerPrice != nil})
+        for product in _preferredProducts {
+            if let offerPrice = product.offerPrice {
+                totalSavingsAmount += Int(offerPrice) ?? 0
         }
+            if let price = product.price {
+                totalAmount += Int(price) ?? 0
+            }
         }
-        self.tableView.reloadData()
+
     }
     
+    func createWishList() {
+        self.countTheTotalNumberOfProductsInWishList()
+        self.getTotalOfferAndProductAmount()
+        
+    }
+    
+    
+    
 }
+
 

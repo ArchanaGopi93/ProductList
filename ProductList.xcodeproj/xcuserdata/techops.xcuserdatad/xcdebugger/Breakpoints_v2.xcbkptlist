@@ -247,32 +247,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BA316CA0-92D5-4713-90AE-C398350EBB13"
+            uuid = "39C703EE-44DA-482B-978D-DFC149EF810F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ProductList/Controller/ViewController.swift"
+            filePath = "ProductList/Controller/WishListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "addOrRemoveProductsFromList(cell:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "182A1EAF-AF60-49D8-9A83-C73161754418"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ProductList/Controller/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "addOrRemoveProductsFromList(cell:)"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "getTotalProductsAndAmount()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

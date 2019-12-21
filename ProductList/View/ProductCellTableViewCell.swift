@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ProductPreferenceDelegate : class {
-    func addOrRemoveProductsFromList(cell:ProductCellTableViewCell)
+    func addOrRemoveProductsFromList(id:String?,isAdded:Bool)
 }
 
 class ProductCellTableViewCell: UITableViewCell {
@@ -17,8 +17,11 @@ class ProductCellTableViewCell: UITableViewCell {
     @IBOutlet weak var productPrice: UILabel!
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productImage: UIImageView!
+    
+    var product : Product? = nil
     var hasOffer:Bool = false
-    @IBOutlet weak var stepper: UIStepper!
+    var countValue:Int = 1
+
     
     @IBOutlet weak var count: UILabel!
     var isPreferred :Bool = false
@@ -35,13 +38,19 @@ class ProductCellTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    @IBAction func stepperValueChanged(_ sender: Any) {
-        if !self.isPreferred {
-            self.isPreferred = true
-        } else {
-            self.isPreferred = false
-        }
-        self.preferredDelegate?.addOrRemoveProductsFromList(cell:self)
+   
+    
+    @IBAction func addButtonTapped(_ sender: Any) {
+        self.countValue += 1
+        self.count.text = countValue.description
+        self.preferredDelegate?.addOrRemoveProductsFromList(id: product?.pid, isAdded: true)
+    }
+    
+    
+    @IBAction func removeButtonTapped(_ sender: Any) {
+        self.countValue -= 1
+        self.count.text = countValue.description
+          self.preferredDelegate?.addOrRemoveProductsFromList(id: product?.pid, isAdded: false)
     }
     
 }
